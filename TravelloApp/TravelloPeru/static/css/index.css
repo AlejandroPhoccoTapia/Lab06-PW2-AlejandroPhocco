@@ -15,7 +15,8 @@ body {
 }
 
 .header__img {
-  background-color: beige;
+  width: 5rem;
+  box-sizing: border-box;
 }
 
 .nav {
