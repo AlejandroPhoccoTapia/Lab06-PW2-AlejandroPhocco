@@ -106,11 +106,26 @@ body {
   box-sizing: border-box;
 }
 
+.sights__list {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  background-color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
 .sights__item {
   background-color: aqua;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+  max-width: 500px;
+  min-width: 200px;
 }
 
 .sights__offer {}
