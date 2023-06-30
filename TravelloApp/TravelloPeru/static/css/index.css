@@ -87,13 +87,35 @@ body {
   flex-basis: 60%;
 }
 
-.sights {}
+.sights {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.sights__item {}
+.sights__h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  box-sizing: border-box;
+}
+
+.sights__item {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .sights__offer {}
 
-.sights__h2 {}
+.sights__h3 {}
 
 .sights__img {}
 
