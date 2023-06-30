@@ -112,10 +112,10 @@ body {
   margin: 0;
   padding: 1rem;
   background-color: black;
-  width: 100%;
+  width: 75%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .sights__item {
