@@ -218,12 +218,14 @@ body {
 }
 
 .detail {
-  background-color: aliceblue;
+  background-color: hsl(0 100% 100%);
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: min(40rem, 90vw);
   padding: 1rem 2rem;
+  overflow: hidden;
 }
 
 .detail__h2 {
@@ -271,10 +273,19 @@ body {
   font-size: 1.125rem;
   padding: 0.5rem 1.5rem;
   border-radius: 1rem;
+  cursor: pointer;
+}
+
+.detail__button:hover {
+  background-color: white;
+  color: orange;
+  border: 1px solid hsl(0 0% 0%);
 }
 
 .register {
-  background-color: black;
+  background-color: hsl(0 100% 100%);
+  border-radius: 2rem;
+  box-shadow: 0 5px 30px 5px hsl(0 0% 40%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,11 +300,23 @@ body {
 
 .register__button {
   padding: 0.5rem 2rem;
+  background-color: hsl(240 100% 45%);
+  border: none;
+  color: hsl(0 100% 100%);
+  border-radius: 0.5rem;
+}
+
+.register__button:hover {
+  background-color: hsl(0 100% 100%);
+  border: 1px solid hsl(0 0% 0%);
+  color: hsl(240 100% 45%);
 }
 
 
 .login {
-  background-color: black;
+  background-color: hsl(0 100% 100%);
+  border-radius: 2rem;
+  box-shadow: 0 5px 30px 5px hsl(0 0% 40%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -310,4 +333,14 @@ body {
 
 .login__button {
   padding: 0.5rem 2rem;
+  background-color: hsl(240 100% 45%);
+  border: none;
+  color: hsl(0 100% 100%);
+  border-radius: 0.5rem;
+}
+
+.login__button:hover {
+  background-color: hsl(0 100% 100%);
+  border: 1px solid hsl(0 0% 0%);
+  color: hsl(240 100% 45%);
 }

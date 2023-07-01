@@ -18,10 +18,10 @@
 
       {% if user.is_authenticated %}
       <p class="nav__a">Bienvenido, {{user.first_name}}</p>
-      <a class="nav__a" href="logout">Cerrar cesión</a>
+      <a class="nav__a" href="{% url 'logout' %}">Cerrar cesión</a>
       {% else %}
-      <a class="nav__a" href="register">Registrarse</a>
-      <a class="nav__a" href="login">Iniciar Sesión</a>
+      <a class="nav__a" href="{% url 'register' %}">Registrarse</a>
+      <a class="nav__a" href="{% url 'login' %}">Iniciar Sesión</a>
       {% endif %}
 
     </nav>
