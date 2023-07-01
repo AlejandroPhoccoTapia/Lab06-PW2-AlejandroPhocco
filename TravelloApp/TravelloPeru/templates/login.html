@@ -1,0 +1,14 @@
+{% extends 'nav.html' %}
+
+{% block content%}
+<main class="main">
+    
+  <form action="login" method="post">
+    {% csrf_token %}\
+    <input type="text" name="username" placeholder="Nombre de Usuario">\
+    <input type="text" name="password" placeholder="Contraseña">
+    <button>Ingresar</button>
+  </form>
+
+</main>
+{% endblock %}

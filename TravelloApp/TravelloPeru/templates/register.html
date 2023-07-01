@@ -1,0 +1,17 @@
+{% extends 'nav.html' %}
+
+{% block content%}
+  <main class="main">
+    
+    <form action="register" method="post">
+      {% csrf_token %}
+      <input type="text" name="first_name" placeholder="Nombre">
+      <input type="text" name="last_name" placeholder="Apellido">
+      <input type="text" name="username" placeholder="Nombre de Usuario">
+      <input type="email" name="email" placeholder="Email">
+      <input type="text" name="password" placeholder="Contraseña">
+      <button>Registrarse</button>
+    </form>
+
+  </main>
+{% endblock %}
