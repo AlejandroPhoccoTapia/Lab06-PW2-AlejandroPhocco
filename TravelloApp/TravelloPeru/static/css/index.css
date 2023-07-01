@@ -23,8 +23,8 @@ body {
 
 .nav {
   height: 100%;
-  width: 20rem;
   display: flex;
+  gap: 2rem;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;

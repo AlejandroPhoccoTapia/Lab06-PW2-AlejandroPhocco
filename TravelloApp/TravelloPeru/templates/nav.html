@@ -15,8 +15,15 @@
     <img class="header__img" src="{% static 'img/logo.png' %}" alt="Icono de la pagina">
     <nav class="nav">
       <a class="nav__a" href="/">Inicio</a>
+
+      {% if user.is_authenticated %}
+      <p class="nav__a">Bienvenido, {{user.first_name}}</p>
+      <a class="nav__a" href="logout">Cerrar cesión</a>
+      {% else %}
       <a class="nav__a" href="register">Registrarse</a>
       <a class="nav__a" href="login">Iniciar Sesión</a>
+      {% endif %}
+
     </nav>
   </header>
 
