@@ -44,6 +44,7 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1.5rem;
   gap: 2rem;
 }
@@ -51,6 +52,7 @@ body {
 .preview {
   background-color: gold;
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -92,6 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .sights__h2 {
@@ -172,3 +175,59 @@ body {
 .footer {}
 
 .footer__p {}
+
+.detail {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(40rem, 90vw);
+  padding: 1rem 2rem;
+}
+
+.detail__h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.detail__img {
+  height: 20rem;
+  margin: 0 0 2rem 0;
+}
+
+.detail__desc {
+  margin: 0 0 1rem 0;
+}
+
+.detail__div {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail__price {
+  display: inline-block;
+  background-color: green;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: white;
+}
+
+.detail__offer {
+  display: inline-block;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: white;
+}
+
+.detail__button {
+  background-color: orange;
+  border: none;
+  color: white;
+  font-size: 1.125rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
