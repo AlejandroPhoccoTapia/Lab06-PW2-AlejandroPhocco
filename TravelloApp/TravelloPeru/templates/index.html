@@ -1,4 +1,5 @@
 {% extends 'nav.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -10,23 +11,10 @@
         <h2 class="preview__h2">Titulo :V</h2>
       </div>
       <div class="preview__content">
-        <img class="preview__img" alt="paisaje">
-        <p class="preview__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-           Officia accusamus doloribus numquam quidem non, voluptates
-            quam aliquam nam eos impedit ducimus, modi illo? Quam officia 
-            repudiandae numquam ipsum quibusdam ducimus.</p>
-      </div>
-    </section>
-    <section class="preview__item">
-      <div class="preview__title">
-        <h2 class="preview__h2">Titulo :V</h2>
-      </div>
-      <div class="preview__content">
-        <img class="preview__img" alt="paisaje">
-        <p class="preview__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-           Officia accusamus doloribus numquam quidem non, voluptates
-            quam aliquam nam eos impedit ducimus, modi illo? Quam officia 
-            repudiandae numquam ipsum quibusdam ducimus.</p>
+        <img src="{% static 'img/paisajes.png' %}" alt="paisaje">
+        <p class="preview__p">Perú donde existe un país legendario que posee: fastuosos centros arqueológicos, mágicos sitios naturales y paisajísticos, majestuosos templos precolombinos y coloniales, ancestrales palacios pre-incas e incas, extraordinarios conventos y casonas coloniales, excelentes aguas termo-medicinales, pueblos tradicionales, milenaria cultura, exquisita gastronomía, fina textilería, variada artesanía… y la más grande cultura viva de América.
+
+          Y por si lo anterior fu poco, este mítico país también posee el más grande legado histórico – cultural del Mundo: historia, cultura, gastronomía, aventura, tradición, naturaleza y biodiversidad. Descubre estos lugares.</p>
       </div>
     </section>
   </div>
