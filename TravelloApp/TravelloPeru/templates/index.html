@@ -52,69 +52,19 @@
     <div class="sights">
       <h2 class="sights__h2">Viajes Nacionales</h2>
       <ul class="sights__list">
+        {% for destination in destinations %}
         <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
+          <h3 class="sights__h3">{{destination.name}}</h3>
+          <div class="sights__img-container">
+            {% if destination.offer %}
+            <div class="sights__offer">OFERTA</div>
+            {% endif %}
+            <img class="sights__img" src="{{destination.img.url}}" alt="paisaje">
+          </div>
+          <p class="sights__p">price: {{destination.price}}.00$</p>
           <a class="sights__a" href="">VER</a>
         </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        <li class="sights__item">
-          <div class="sights__offer">Oferta</div>
-          <h3 class="sights__h3">Nombre del paisaje</h3>
-          <img class="sights__img" src="" alt="paisaje">
-          <p class="sights__p">price: 10.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
+        {% endfor %}
       </ul>
     </div>
 

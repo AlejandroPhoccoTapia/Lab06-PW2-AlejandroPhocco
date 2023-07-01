@@ -115,6 +115,7 @@ body {
   width: 75%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -127,19 +128,32 @@ body {
   padding: 0.75rem 0;
 }
 
-.sights__offer {
-  position: absolute;
-}
 
 .sights__h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.375rem;
 }
 
+.sights__img-container {
+  box-sizing: content-box;
+  position: relative;
+}
+
+.sights__offer {
+  position: absolute;
+  z-index: 1;
+  background-color: red;
+  right: 5%;
+  top: 5%;
+  display: inline-block;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  color: hsl(0 0% 100%)
+}
+
 .sights__img {
   margin: 0 0 0.5rem 0;
-  background-color: pink;
-  height: 6rem;
+  height: 10rem;
 }
 
 .sights__p {
