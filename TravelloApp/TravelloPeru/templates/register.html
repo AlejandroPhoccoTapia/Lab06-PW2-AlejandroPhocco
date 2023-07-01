@@ -3,14 +3,14 @@
 {% block content%}
   <main class="main">
     
-    <form action="register" method="post">
+    <form class="register" action="register" method="post">
       {% csrf_token %}
-      <input type="text" name="first_name" placeholder="Nombre">
-      <input type="text" name="last_name" placeholder="Apellido">
-      <input type="text" name="username" placeholder="Nombre de Usuario">
-      <input type="email" name="email" placeholder="Email">
-      <input type="text" name="password" placeholder="Contraseña">
-      <button>Registrarse</button>
+      <input class="register__input" type="text" name="first_name" placeholder="Nombre">
+      <input class="register__input" type="text" name="last_name" placeholder="Apellido">
+      <input class="register__input" type="text" name="username" placeholder="Nombre de Usuario">
+      <input class="register__input" type="email" name="email" placeholder="Email">
+      <input class="register__input" type="text" name="password" placeholder="Contraseña">
+      <button class="register__button">Registrarse</button>
     </form>
 
   </main>

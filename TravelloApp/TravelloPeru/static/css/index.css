@@ -45,6 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   padding: 1.5rem;
   gap: 2rem;
 }
@@ -230,4 +231,43 @@ body {
   font-size: 1.125rem;
   padding: 0.5rem 1.5rem;
   border-radius: 1rem;
+}
+
+.register {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.register__input {
+  height: 1.5rem;
+  width: 15rem;
+}
+
+.register__button {
+  padding: 0.5rem 2rem;
+}
+
+
+.login {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.login__input {
+  height: 1.5rem;
+  width: 15rem;
+  margin: 0;
+}
+
+.login__button {
+  padding: 0.5rem 2rem;
 }

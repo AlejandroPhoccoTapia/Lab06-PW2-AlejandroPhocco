@@ -3,11 +3,11 @@
 {% block content%}
 <main class="main">
     
-  <form action="login" method="post">
-    {% csrf_token %}\
-    <input type="text" name="username" placeholder="Nombre de Usuario">\
-    <input type="text" name="password" placeholder="Contraseña">
-    <button>Ingresar</button>
+  <form class="login" action="login" method="post">
+    {% csrf_token %}
+    <input class="login__input" type="text" name="username" placeholder="Nombre de Usuario">
+    <input class="login__input" type="text" name="password" placeholder="Contraseña">
+    <button class="login__button">Ingresar</button>
   </form>
 
 </main>
