@@ -1,78 +1,55 @@
-{% load static %}
+{% extends 'nav.html' %}
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% block content %}
 
-  <title>Paisajes</title>
-</head>
-<body>
-  
-  <header class="header">
-    <img class="header__img" src="{% static 'img/logo.png' %}" alt="Icono de la pagina">
-    <nav class="nav">
-      <a class="nav__a" href="">Inicio</a>
-      <a class="nav__a" href="">Registrarse</a>
-      <a class="nav__a" href="">Iniciar Sesión</a>
-    </nav>
-  </header>
+<main class="main">
 
-  <main class="main">
+  <div class="preview">
+    <section class="preview__item">
+      <div class="preview__title">
+        <h2 class="preview__h2">Titulo :V</h2>
+      </div>
+      <div class="preview__content">
+        <img class="preview__img" alt="paisaje">
+        <p class="preview__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+           Officia accusamus doloribus numquam quidem non, voluptates
+            quam aliquam nam eos impedit ducimus, modi illo? Quam officia 
+            repudiandae numquam ipsum quibusdam ducimus.</p>
+      </div>
+    </section>
+    <section class="preview__item">
+      <div class="preview__title">
+        <h2 class="preview__h2">Titulo :V</h2>
+      </div>
+      <div class="preview__content">
+        <img class="preview__img" alt="paisaje">
+        <p class="preview__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+           Officia accusamus doloribus numquam quidem non, voluptates
+            quam aliquam nam eos impedit ducimus, modi illo? Quam officia 
+            repudiandae numquam ipsum quibusdam ducimus.</p>
+      </div>
+    </section>
+  </div>
 
-    <div class="preview">
-      <section class="preview__item">
-        <div class="preview__title">
-          <h2 class="preview__h2">Titulo :V</h2>
+  <div class="sights">
+    <h2 class="sights__h2">Viajes Nacionales</h2>
+    <ul class="sights__list">
+      {% for destination in destinations %}
+      <li class="sights__item">
+        <h3 class="sights__h3">{{destination.name}}</h3>
+        <div class="sights__img-container">
+          {% if destination.offer %}
+          <div class="sights__offer">OFERTA</div>
+          {% endif %}
+          <img class="sights__img" src="{{destination.img.url}}" alt="paisaje">
         </div>
-        <div class="preview__content">
-          <img class="preview__img" alt="paisaje">
-          <p class="preview__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-             Officia accusamus doloribus numquam quidem non, voluptates
-              quam aliquam nam eos impedit ducimus, modi illo? Quam officia 
-              repudiandae numquam ipsum quibusdam ducimus.</p>
-        </div>
-      </section>
-      <section class="preview__item">
-        <div class="preview__title">
-          <h2 class="preview__h2">Titulo :V</h2>
-        </div>
-        <div class="preview__content">
-          <img class="preview__img" alt="paisaje">
-          <p class="preview__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-             Officia accusamus doloribus numquam quidem non, voluptates
-              quam aliquam nam eos impedit ducimus, modi illo? Quam officia 
-              repudiandae numquam ipsum quibusdam ducimus.</p>
-        </div>
-      </section>
-    </div>
+        <p class="sights__p">price: {{destination.price}}.00$</p>
+        <a class="sights__a" href="/destination/{{destination.id}}">VER</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-    <div class="sights">
-      <h2 class="sights__h2">Viajes Nacionales</h2>
-      <ul class="sights__list">
-        {% for destination in destinations %}
-        <li class="sights__item">
-          <h3 class="sights__h3">{{destination.name}}</h3>
-          <div class="sights__img-container">
-            {% if destination.offer %}
-            <div class="sights__offer">OFERTA</div>
-            {% endif %}
-            <img class="sights__img" src="{{destination.img.url}}" alt="paisaje">
-          </div>
-          <p class="sights__p">price: {{destination.price}}.00$</p>
-          <a class="sights__a" href="">VER</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+</main>
 
-  </main>
-
-  <footer class="footer">
-    <p class="footer__p">Alejandro Josue Phocco Tapia</p>
-  </footer>
-
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'nav.html' %}
+
+{% block content%}
+  <main class="main">
+    <div class="detail">
+      <img class="detail__img" src="{{destination.img.url}}" alt="">
+      <h2 class="detail__h2">{{destination.name}}</h2>
+      <p class="detail__desc">{{destination.desc}}</p>
+      <p class="detail__price">precio: {{destination.price}}.0$</p>
+      {% if destination.offer %}
+      <p class="detail__offer">Aprovecha la oferta!!!</p>
+      {% endif %}
+      <button class="detail__button">Comprar</button>
+    </div>
+  </main>
+{% endblock %}
